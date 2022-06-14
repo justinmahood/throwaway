@@ -1,4 +1,7 @@
-name: buttontest
+name: default
 service: 
 - name: buttontesthello
   image: us-docker.pkg.dev/cloudrun/container/hello
+  
+redis:
+  - name: buttonredis
