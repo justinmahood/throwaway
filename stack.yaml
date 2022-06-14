@@ -2,7 +2,7 @@ name: button
 service: 
 - name: buttontesthello
   image: us-docker.pkg.dev/cloudrun/container/hello
-  resource:
-    ref: redis/buttonredis
+  resources:
+  - ref: redis/buttonredis
 redis:
 - name: buttonredis
