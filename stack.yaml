@@ -1,4 +1,4 @@
-name: button
+name: newbutton
 service: 
 - name: buttontesthello
   image: us-docker.pkg.dev/cloudrun/container/hello
