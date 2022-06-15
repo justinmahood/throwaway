@@ -1,8 +1,15 @@
-name: newbutton
+name: default
+
 service: 
-- name: buttontesthello
-  image: us-docker.pkg.dev/cloudrun/container/hello
+- name: web
+  image: gcr.io/jmahood-demo/sr:latest
   resources:
-  - ref: redis/buttonredis
+  - ref: redis/web-redis
+  
+router:
+  domain: serverless.jmahood.com
+  default-route:
+    ref: service/web
+
 redis:
-- name: buttonredis
+- name: web-redis
