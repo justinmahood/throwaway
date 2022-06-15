@@ -7,9 +7,13 @@ service:
   - ref: redis/web-redis
  
 router:
-- domain: serverless.jmahood.com
+- name: web-router
+  domain: serverless.jmahood.com
   default-route:
     ref: service/web
 
 redis:
 - name: web-redis
+  instance: 
+    memory-size-gb: 1
+  
